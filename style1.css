@@ -1,0 +1,101 @@
+*{
+    box-sizing:border-box;
+      /* by selecting the box-sizing as border now when we say width and height the padding and border are also included in it. */
+
+}
+
+body{
+    background:#EE6F57;
+margin:0;
+/*By setting margin equal to 0 it will remove the default margin set by the browser*/
+}
+
+header{
+    display: flex;
+    font-size:2rem;
+    /*Setting header center on the flex*/
+    justify-content:center;
+    color:black;
+}
+
+hr {
+    border: 1px solid black;
+    width: 100%;
+  }
+
+
+.navbar {
+    display: inline-block;
+    width: auto;
+    border: 8.5px solid black;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 24px;
+  }
+  .navbar li a {
+    color: black;
+    text-decoration: none;
+    padding: 34px 23px;
+  }
+  
+  .navbar li a:hover,
+  .navbar li a.active {
+    text-decoration: underline;
+    color: black;
+  }
+  
+
+.row{
+    display:flex;
+    /* warp is used adjust the content(images) in the flex box   */
+     flex-wrap: wrap;
+     padding:0 4px;
+}
+
+
+.column{
+    /* flex is short hand property */
+    /* I have fixed flex size 30% for this column */
+  flex:30%;
+  padding:0px 20px;
+}
+
+.column img{
+    margin-top:8px;
+    margin-bottom: 8px;
+    width:100%;
+    border-radius: 6px;
+}
+
+footer {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2px;
+    font-size: 16px;
+    text-align: center;
+    background: #3c415c;
+    color: white;
+    width: 100%;
+    margin-top: 47px;
+    margin-left: 0px;
+    margin-bottom:15px;
+    margin-right: 15px;
+  }
+
+/* To make webpage responsive we are using media query's here */
+
+@media screen and (max-width:800px)
+{
+    .column{
+        flex:50%;
+        padding:0 10px;
+    }
+}
+
+@media screen and (max-width:400px){
+    .column{
+        flex:100%;
+        padding:0 10px;
+    }
+}
